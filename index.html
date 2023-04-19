@@ -1,0 +1,592 @@
+<html>
+<head>
+<title>Resume Website Template</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+<script src="smooth-scroll.js"></script>
+  <script>
+    var scroll = new SmoothScroll('a[href*="#"]');
+  </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"> </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+<!---------------------CSS  Section--------------------->
+  body
+  {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+
+  }
+  /*-----------------------Header CSS------------------------------------*/
+#Header
+{
+    height:100vh;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(https://source.unsplash.com/1600x900/?CoderBooks,Hacker,Coder);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.user-box
+{
+  top:50%;
+  left:49%;
+  transform: translate(-50%,-50%);
+  position: absolute;
+}
+.user-box img
+{
+  border-radius: 50%;
+  width: 250px;
+  border: 2px solid #6caed5;
+}
+.user-box h1
+{
+  color: #fff;
+  font-weight: bold;
+  margin:10px;
+}
+.user-box p
+{
+  color : #fff;
+    right: 60%;
+}
+.scroll-btn
+{
+  bottom: 30px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid #fff;
+  padding: 10px 10px 20px;
+  border-radius: 30px;
+}
+.scroll_bar span
+{
+  border: 2px solid #fff;
+  font-size: 10px;
+  border-radius: 30px;
+}
+.scroll_bar
+{
+    animation: mover is infinite alternate;
+}
+@keyframes mover
+{
+  0%{transform: translateY(0);}
+  100%{transform: translateY(10px);}
+}
+/*--------------------About-----------------------*/
+.about
+{
+  padding-top: 100px;
+  margin-bottom: -130px;
+}
+.profile-img
+{
+    height: 400px;
+    border-radius: 19%;
+}
+
+.nav-bar
+{
+  top: 0;
+  position: sticky;
+  z-index: 2;
+}
+.navbar
+{
+  background-color: #000;
+}
+.navbar-brand img
+{
+  height: 50px;
+}
+.nav-bar .fa-bars
+{
+  font-size: 35px;
+  color: #fff;
+}
+.navbar-toggler
+{
+  outline: none !important;
+}
+.navbar-nav
+{
+  float: right;
+  text-align: right;
+}
+.nav-link
+{
+  color: #fff !important;
+}
+.skills-bar p
+{
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+.progress
+{
+  border-radius: 16px !important;
+  margin-bottom: 10px;
+}
+.progress-bar
+{
+  border-radius: 16px;
+  background: #000 !important;
+}
+
+/*-------------------Resume-------------------------*/
+
+.resume
+{
+  margin-top: -50px;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  /* background: #f9f9f9; */
+}
+.resume h3
+{
+      margin-bottom: 50px;
+}
+.timeline
+{
+    list-style-type: none;
+    position: relative;
+}
+.timeline:before
+{
+  content: '';
+  background: #fff;
+  display: inline-block;
+  position: absolute;
+  left: 29px;
+  width: 2px;
+  height: 100%;
+  z-index: 1;
+}
+.timeline li
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    background: #fff;
+}
+
+.timeline li h4 {
+    background-color: #000000;
+    font-color:#fff;
+    color: #fff;
+    padding: 5px 0 5px 20px;
+    column-rule-color: #fff;
+    font-size: 15px;
+}
+.timeline li:h4 span
+{
+  font-weight: bold;
+  color: #ccc;
+}
+.timeline li:before
+{
+  content: '';
+  background: #fff;
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid #000;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+}
+
+/*--------------------Services----------------------*/
+.services
+{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.services h1
+{
+  margin-bottom: 15px;
+}
+.service-box
+{
+  background: #f9f9f9;
+  padding: 10px;
+  margin-top: 20px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+.service-box .fa
+{
+  margin: 0 10px;
+  font-size: 20px;
+}
+.service-box span
+{
+  margin: 3px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.service-box p
+{
+  font-size: 15px;
+  margin-top: 20px;
+  color: #777;
+}
+.service-box:hover
+{
+  background: #000;
+  color: #fff;
+  margin-top: 20px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 50px;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  transition: 1s;
+}
+.services-box:hover p
+{
+  color: #fff;
+}
+
+/*-------------------Contact------------------------*/
+.contact
+{
+    padding: 30px;
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(https://source.unsplash.com/1600x900/?Dark,Coder);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+}
+.footer
+{
+  background: #000;
+  height: 50px;
+  margin-top: 50px;
+  color: #fff;
+  padding-top: 10px;
+}
+.fa-heart-o
+{
+  color: red;
+}
+
+/*---------------Social-icons-------------------*/
+.social-icons
+{
+  top: 50%;
+  transform: translateY(-50%);
+  position: sticky;
+  z-index: 1;
+  width: 80px;
+}
+.social-icons ul
+{
+  padding: initial;
+}
+.social-icons ul
+{
+  height: 40px;
+  width: 40px;
+  list-style-type: none;
+  padding-left: 12px;
+  padding-top: 6px;
+  margin-top: 5px;
+  color: #fff;
+  background: #000;
+}
+.social-icons ul li:hover
+{
+  padding-left: 30px;
+  width: 80px;
+  transition: 1s;
+}
+.projectLink{
+  color:#777;
+  text-decoration: none;
+}
+.projectLink:hover {
+  color: #fff !important;
+}
+.links {
+ color:#777;
+  text-decoration: none;
+}
+
+#projects_{
+  display: flex;
+align-items: center;
+justify-content: center;
+}
+
+
+</style>
+<body>
+
+<!---------------------Header  Section--------------------->
+<section id="header">
+
+</section>
+    <div class="container text -center">
+        <div class="user-box">
+            <h1 class="text-center">VIPIN_DODKE</h1>
+            <p class="text-center">React Native ( Android | iOS | Mac | Windows | Web )<br> Python Django<br> IoT Developer (Raspberry Pi)</p>
+        </div>
+    </div>
+    <div class="scroll-btn">
+        <div class="scroll-bar"><a href="#about"><span>|</span></a></div>
+    </div>
+</section>
+<!-------------------User-Info Section-------------------->
+
+<section id="user-info">
+    <div class="nav-bar">
+        <nav class="navbar navbar-expand-lg ">
+            <a class="navbar-brand" href="#">Portfolio</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#top">INTRODUCTION</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">ABOUT ME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#resume">RESUME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">PROJECTS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#contact">CONTACT</a>
+                        </li>
+                    </ul>
+                </div>
+        </nav>
+    </div>
+
+     <!----------------------About--------------------->
+     
+     <div class="about container" id="about">
+         <div class="row">
+             <div class="col-md-6 text-center" style="height: fit-content;">
+                  <img src="f1.jpg" class="profile-img">
+             </div>
+             <div class="col-md-6">
+                 <h3>WHO AM I ?</h3>
+                 <p>
+                    I am a Software Engineer with 2+ years of experience. I am a self-motivated and passionate developer who enjoys solving
+                    complex problems and developing software that makes a difference.
+                    I have experience in a variety of programming languages such as Python and JavaScript, and I am familiar with frameworks
+                    and libraries such as React Native, Django, React, Rest_API, Redux etc. I am also familiar with databases and have
+                    experience working with SQL and ORM in Frontend (Offline) and Backend. I am also a strong problem solver and a good communicator.
+                    As a software developer with 2+ years of experience, I am excited to take on new challenges and continue to grow
+                    and learn as a developer. I am looking forward to the opportunity to work on interesting projects and contribute to the
+                    development of innovative software solutions.
+                 </p>
+
+                 <div class="skills-bar">
+                     <p>Full Stack App/Web ( React Native/React/Python-Django )</p>
+                     <div class="progress">
+                        <div class="progress-bar" style="width: 85%;">85%</div>
+                     </div>
+                    
+                     <p>IoT ( Raspberry Pi / AT. Mega 8L ) Developer</p>
+                     <div class="progress">
+                         <div class="progress-bar" style="width: 60%;">60%</div>
+                     </div>
+                </div>
+            </div>
+        </div>
+
+        <!----------------------Resume----------------------------->
+    <div class="resume" id="resume">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="text-center my-5">My Experience</h3>
+                    <ul class="timeline">
+                        <li>
+                            <h4><span>(April 2021 - Present) - </span> React Native Developer</h4>
+                            <p>
+                            Experience and dedicated full stack mobile app developer offiring more the 2 years of expertise to the IT industry. Dynamic and personable with strong focus on application lificycle.<br>
+                            <b>company</b> - <a href="https://www.softsuave.com/" class="links">SoftSuave Technologies Pvt Ltd</a><br>
+                            <b>Duration</b> - 2+ Years ( since April 2021 )<br>
+                            <b>Location</b> - Bangalore, Karnataka India
+                            </p>
+                        </li>
+                        <li>
+                            <h4>(November 2022 - Present)<span> - </span> IoT Developer </h4>
+                            <p>
+                            Experience designing software and functionality capable of controlling a hardware chipset (Raspberry Pi / ATMega8L)<br>
+                            <b>company</b> - <a href="https://www.softsuave.com/" class="links">SoftSuave Technologies Pvt Ltd</a><br>
+                            <b>Duration</b> - 3+ Month ( since December 2022 )<br>
+                            <b>Location</b> - Bangalore, Karnataka India.
+                            </p>
+                        </li>
+                        <li>
+                            <h4><span>(August 2020 - March 2021) -</span> Python Django Developer</h4>
+                            <p>
+                            Experience developing web application implementation (MVC/MVT) using the Django web application framework. I worked on
+                            data analytics, data waging and excel data extraction in python based environment.<br>
+                            <b>company</b> - <a href="https://www.prayogik.in/" class="links">Prayogik Technologies</a>  <br>
+                            <b>Duration</b> - 8+ Month ( since August 2020 )<br>
+                            <b>Location</b> - Bhopal, Madhya Pradesh India.
+                            </p>
+                        </li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="text-center my-5">Work Education</h3>
+                    <ul class="timeline">
+                        <li>
+                            <h4><span>2020 - </span> Bachelor Of Engineering ( ECE.)</h4>
+                            <p>
+                            Communication Theory and Systems in ECE involves the detection of signals, the prediction and filtering of random processes, the design and analysis of communication systems, the analysis of protocols for communication networks, and statistical processing of images.<br>
+                            <b>Institute</b> - Technocrets Institute of Technology Advance.<br>
+                            <b>Session</b> - 2016-2020<br>
+                            <b>Aggregate</b> - 74.90%
+                            </p>
+                        </li>
+
+                        <li>
+                            <h4><span>2016 - </span> HSC .</h4>
+                            <p>Upper or higher secondary education lasts two years (grades 11 and 12) and is more specialized and divided into streams. There are two different tracks: vocational/technical and general academic, with the latter being further divided into humanities, commerce, and science streams.</p>
+                            <b>Institute</b> - DEVKRIPA VIDHYA MANDIR HIGHER SECONDARY<br>
+                            <b>Session</b> - 2015-2016<br>
+                            <b>Aggregate</b> - 60.60%
+                            </p>
+                        </li>
+
+                        <li>
+                            <h4><span>2014 - </span> SSC .</h4>
+                            <p>
+                            Admission into higher secondary education is competitive and usually based on the average score in the final grade 10 board exams. Minimum grades required for admission vary by stream and institution.<br>
+                            <b>Institute</b> - DEVKRIPA VIDHYA MANDIR HIGHER SECONDARY<br>
+                            <b>Session</b> - 2013-2014<br>
+                            <b>Aggregate</b> - 58.90%
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+        <!-----------------------Projects------------------------------->
+
+        <div class="projects" id="projects">
+          <div class="container">
+            <h1 class="text-center"> Projects</h1>
+            <p class="text-center"> Basic description.</p>
+            <div class="row" id="projects_">
+              <div class="col-md-4">
+                <div class="service-box">
+                  <i class="fa fa-rocket"></i><span>Yoke Payments</span>
+                  <p>Yoke Payments Easy pay
+                  YokePayments is a shopping tool, it has features like scanning
+                  barcode (for product add into the cart), scanning QR code (for check
+                  in into the market), Wallet, Deals, Reward, and Cart. It also has a
+                  variant for the KIOSK system. You can install this app into the
+                  Shopping malls to be used by the buyers in that Shopping mall.
+                  We used react-native to build android and ios apps. It has the
+                  hardware integration for KIOSK to connect with a credit card reader
+                  and scanner with cable and Bluetooth.<br>
+                  ■ Role: React Native Developer<br>
+                  ■ Library: SQLite (Local DB), geolocation, Push notifications, Axios,
+                  Touch-Id, tipsi-stripe, Redux, Redux-thunk, react-redux.<br>
+                  ■ Team: 7 members ( Including Backend and QA ).<br>
+                  ■ Project Link: <a href="https://www.cantaloupe.com/hardware-yoke-pos" class="projectLink">YokePayments Pos</a> 
+                  </p>
+                </div>
+              </div>
+        
+              <div class="col-md-4">
+                <div class="service-box">
+                  <i class="fa fa-line=chart"></i><span>Affitu Property Rental</span>
+                  <p>Mobile application for Home rentals. Users can register to the
+                  application and search for the house they want to rent.
+                  Users can apply filters based on their requirements like price,
+                  number of rooms, distance from the public places.
+                  Users can also contact the house owners, chat and save the
+                  property they like.<br>
+                  ■ Role: Junior React Native Developer.<br>
+                  ■ Library: Push notifications, Axios, Socket-io, Redux, Redux-thunk,
+                  react-redux.<br>
+                  ■ Team: 12 members ( Including Backend and QA ).<br>
+                  ■ Project Link: <a href="https://www.affitu.com/" class="projectLink">Affitu</a>
+                 </p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="service-box">
+                  <i class="fa fa-line=chart"></i><span>Pronos</span>
+                  <p>Pronos, It is a remote application, which controls the projector and user
+                    commercials like video or images.
+                    Using this app, the user can convert any car window into a digital
+                    display.<br>
+                    ■ Role: Senior Developer<br>
+                    ■ Library: Ble-plx, Axios, NetInfo<br>
+                    ■ Team: 5 members<br>
+                    ■ Project Link: <a href="https://pranos.ai/" class="projectLink">Pranos ai</a>
+                    </p> 
+              </div>
+              </div>
+        
+             
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <!-----------------------Services------------------------------->
+
+        <div class="services" id="services">
+            <div class="container">
+                <h1 class="text-center"> Looking for full time job opportunity</h1>
+                <p class="text-center">I have Handling Client<br>
+                Delivering required task to client before deadline<br>
+                Handling juniors in the projects<br>
+                Worked in test tasks to get the client projects<br></p>
+            </div>
+        </div>
+
+        <!------------------------Contact------------------------------->
+        <div class="contact" id="contact">
+            <div class="container">
+                <!-- <h1 class="text-center"> Looking for full time job opportunity</h1> -->
+                <p class="text-center">
+                   <a href="https://www.linkedin.com/in/vipin-dodke-53115318a/" class="links">Linkedin Profile</a> <br>
+               <a href="https://github.com/VipinDodke" class="links">GitHub Profile</a> <br>
+           
+                  vipin830525@gmail.com<br>
+                +91 7746832666<br>
+                </p>
+               </div>
+        </div>
+         
+    </div>
+</section>
+
+
+<!-------------------Smooth Scroll---------------------------->
+
+
+
+
+
+</body>
+</html>
+
+
